@@ -1,0 +1,68 @@
+.orders-container, .orders-container * {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.orders-container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: auto;
+    color: #333;
+}
+
+.orders-header {
+    color: #20232a; /* Deep blue */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.order-header {
+    background-color: #20232a;
+    border-radius: 0px;
+    color: white;
+    border: 1px solid #20232a;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 0.4s;
+}
+
+
+.order-header:hover {
+    background-color: white;
+    color: #20232a;
+}
+
+.order-details {
+    padding: 15px;
+    background-color: #f9f9f9; /* Light grey */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.order-details li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    list-style-type: none; /* This removes the bullet points */
+    padding-left: 0; /* This removes any default padding */
+    transition-duration: 0.4s;
+}
+
+.order-details li:hover {
+    background-color: #e9e9e9; /* Light hover */
+}

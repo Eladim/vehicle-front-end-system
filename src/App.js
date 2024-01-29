@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import OrderForm from './OrderForm';
+import OrdersList from './OrdersList';
+import Home from './Home'; // Import the Home component
+import Style from './StyleTest.js';
+import { ClientProvider } from './ClientContext';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ClientProvider>
+            <Router>
+                <div className="App">
+                    <nav>
+                        <Link to="/">Home</Link> | 
+                        <Link to="/create-order">Create Order</Link> |
+                        <Link to="/orders">View Orders</Link> | 
+                        <Link to="/style-test">Style Test</Link>
+                    </nav>
+
+                    <Routes>
+                        <Route path="/" element={<Home />} /> {/* Updated this line */}
+                        <Route path="/create-order" element={<OrderForm />} />
+                        <Route path="/orders" element={<OrdersList />} />
+                        <Route path="/style-test" element={<Style />} />
+
+                    </Routes>
+                </div>
+            </Router>
+        </ClientProvider>
+    );
 }
 
 export default App;
