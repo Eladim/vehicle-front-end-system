@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Env
+
+Create env with vars
+
+STRIPE_SECRET_KEY = 
+
+REACT_APP_STRIPE_PUBLIC_KEY =
+
+
 ## Available Scripts
 
 In the project directory, you can run:
